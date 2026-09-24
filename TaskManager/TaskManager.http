@@ -1,0 +1,26 @@
+@TaskManager_HostAddress = http://localhost:5221
+
+POST {{TaskManager_HostAddress}}/api/Tasks
+Content-Type: application/json
+
+{
+  "id":3,
+  "title": "Study SQL",
+  "description": "Practice SQL",
+  "isCompleted":false
+}
+
+###
+Get {{TaskManager_HostAddress}}/api/Tasks/1
+###
+DELETE {{TaskManager_HostAddress}}/api/Tasks/1
+###
+Get {{TaskManager_HostAddress}}/api/Tasks
+###
+Put {{TaskManager_HostAddress}}/api/Tasks/1
+Content-Type: application/json
+{
+  "title": "Study C# deeply",
+  "description": "Review OOP and LINQ",
+  "isCompleted": true
+}
