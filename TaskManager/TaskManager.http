@@ -24,3 +24,5 @@ Content-Type: application/json
   "description": "Review OOP and LINQ",
   "isCompleted": true
 }
+###
+Patch {{TaskManager_HostAddress}}/api/Tasks/2/complete

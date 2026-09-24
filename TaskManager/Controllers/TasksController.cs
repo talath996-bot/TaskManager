@@ -69,6 +69,16 @@ namespace TaskManager.Controllers
             task.IsCompleted = updatedTask.IsCompleted;
             return NoContent();
         }
+
+        [HttpPatch("{id}/complete")]
+        public IActionResult Complete(int id)
+        {
+            var task = tasks.FirstOrDefault(x => x.Id==id);
+            if(task==null) return NotFound();
+
+            task.IsCompleted= true;
+            return NoContent();
+        }
     }
     
 }
